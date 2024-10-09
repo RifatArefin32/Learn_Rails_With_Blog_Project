@@ -52,6 +52,9 @@ rails console
 
 ## Routes
 The routers will be written at `config/routers.rb` file
+`get "/blog_posts", to: "blog_posts#index", as: blog_post` Here, `blog_post` is the name of the route. This name can be used as path and url implicitly. 
+- blog_post_path(1): `blog_posts/1` 
+- blog_post_url(1): `http://localhost:3000/blog_posts/1`
 
 ## Create A New Controller
 ```bash
