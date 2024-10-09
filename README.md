@@ -48,3 +48,15 @@ rails console
 | BlogPost.create(title: "Test Title", body: "This is test body") | Create an object of BlogPost Model |
 | BlogPost.find(1) | Gives the record of `blog_posts` table with `id = 1` |
 | blog_post.update(title: "Updated Title") | Update the title of `blog_post` object |
+
+## Routes
+The routers will be written at `config/routers.rb` file
+
+## Create A New Controller
+```bash
+rails generate controller BlogPosts index --skip-routes # without creating routes
+```
+- Create `app/controllers/blog_posts_controller.rb` controller
+- Create `app/views/blog_posts` directory of all views for blog posts
+- Create `app/views/blog_posts/index.html.erb` index view as we mentioned `index` action while creating the controller
+- Create `test/controllers/blog_posts_controller_test.rb` file to test the blog_posts controller
