@@ -8,7 +8,8 @@
 | Model | BlogPost |
 | Model file | blog_post |
 | Table Name | blog_posts |
-
+| Controller | BlogPostsController |
+| Controller File Name | blog_posts_controller |
 
 ## Create a new project  
 
