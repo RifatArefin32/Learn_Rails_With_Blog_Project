@@ -10,13 +10,13 @@
 | Table Name | blog_posts |
 
 
-## Create new project  
+## Create a new project  
 
 ```bash
 rails new blog`
 ```
 
-## Create model in rails
+## Create a Model
 
 Create `BlogPost` model that contains two fields `title` and `body`
 ```bash
@@ -28,14 +28,14 @@ This command will create:
 - `test/models/blog_post_test.rb` model's unit test file
 - `test/fixtures/blog_posts.yml` YAML file that might be used in a testing context,
 
-## Migrate rails
+## Migrate Database
 
 ```bash
 rails db:migrate
 ```
 Add `storage/development.sqlite3` to the local server.
 
-## Rails Console
+## Perform CRUD on Rails Console
 
 Enter into the rails console using the following command:
 
