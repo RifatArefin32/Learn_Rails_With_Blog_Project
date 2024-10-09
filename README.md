@@ -34,3 +34,17 @@ This command will create:
 rails db:migrate
 ```
 Add `storage/development.sqlite3` to the local server.
+
+## Rails Console
+
+Enter into the rails console using the following command:
+
+```bash
+rails console
+```
+| Method | Description |
+|---------|-------------|
+| BlogPost.all | Gives all records of the `blog_posts` table |
+| BlogPost.create(title: "Test Title", body: "This is test body") | Create an object of BlogPost Model |
+| BlogPost.find(1) | Gives the record of `blog_posts` table with `id = 1` |
+| blog_post.update(title: "Updated Title") | Update the title of `blog_post` object |
