@@ -4,6 +4,6 @@
     <%= render partial: "form", locals: {blog_post: @blog_post} %>
 </div>
 <div>
-    <%= button_to "Delete Post", @blog_post, method: :delete %>
+    <%= button_to "Delete Post", @blog_post, method: :delete, data: { turbo_confirm: 'Are you sure?' } %>
 </div>
 
