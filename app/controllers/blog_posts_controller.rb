@@ -4,7 +4,7 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all
   end
 
-  # show an object
+  # show a BlogPost object
   def show
     @blog_post = BlogPost.find(params[:id])
   rescue ActiveRecord::RecordNotFound
@@ -12,11 +12,12 @@ class BlogPostsController < ApplicationController
     redirect_to "/"
   end
 
-  # create new object
+  # create new post form
   def new
     @blog_post = BlogPost.new
   end
 
+  # Create new BlogPost object
   def create
     @blog_post = BlogPost.new(blog_post_params)
     if @blog_post.save
@@ -27,11 +28,12 @@ class BlogPostsController < ApplicationController
     end
   end
 
-  # Open t
+  # Open edit a post form
   def edit
     @blog_post = BlogPost.find(params[:id])
   end
 
+  # Update a BlogPost object
   def update
     @blog_post = BlogPost.find(params[:id])
     if @blog_post.update(blog_post_params)
@@ -41,6 +43,7 @@ class BlogPostsController < ApplicationController
     end
   end
 
+  # Delete a BlogPost object
   def destroy
     @blog_post = BlogPost.find(params[:id])
     @blog_post.destroy
