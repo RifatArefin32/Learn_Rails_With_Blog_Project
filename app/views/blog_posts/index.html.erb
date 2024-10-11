@@ -1,17 +1,23 @@
 <h1>Index Page</h1>
 
 <% @blog_posts.each do |blog_post| %>
-    <div>
+    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
         <div>
-            <h2> <%= blog_post.title %> </h2>
+            <h3> <%= blog_post.title %> </h3>
         </div>
         <div>
-            <h2> <%= blog_post.body %> </h2>
+            <h3> <%= blog_post.body %> </h3>
         </div>
         <div>
-            <h2> <%= link_to "Go Details", "/blog_posts/#{blog_post.id}" %> </h2>
-            <h2> <%= link_to "Go Details", blog_post_path(blog_post.id) %> </h2>
-            <h2> <%= link_to "Go Details", blog_post %> </h2>
+            <strong> <%= link_to "Go Details", "/blog_posts/#{blog_post.id}" %> </strong>
+            <strong> <%= link_to "Go Details", blog_post_path(blog_post.id) %> </strong>
+            <strong> <%= link_to "Go Details", blog_post %> </strong>
         </div>
     </div>
 <% end %>
+
+<div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+    <h2>
+        <%= link_to "Create New Blog", new_blog_post_path %>
+    </h2>
+</div>

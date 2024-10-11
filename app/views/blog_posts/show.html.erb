@@ -1,10 +1,13 @@
 <h1>Show Page</h1>
 
-<div>
-    <div>
+<div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
         <h2> <%= @blog_post.title %> </h2>
     </div>
-    <div>
+    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
         <h2> <%= @blog_post.body %> </h2>
+    </div>
+    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+        <h2> <%= link_to "Home Page", root_path %> </h2>
     </div>
 </div>    

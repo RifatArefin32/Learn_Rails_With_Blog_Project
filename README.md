@@ -64,3 +64,8 @@ rails generate controller BlogPosts index --skip-routes # without creating route
 - Create `app/views/blog_posts` directory of all views for blog posts
 - Create `app/views/blog_posts/index.html.erb` index view as we mentioned `index` action while creating the controller
 - Create `test/controllers/blog_posts_controller_test.rb` file to test the blog_posts controller
+
+## ActiveModel::ForbiddenAttributesError
+This error is raised in Ruby on Rails when we're trying to assign mass parameters that haven't been permitted. Rails has strong parameters to prevent mass assignment vulnerabilities, and this error typically occurs when we attempt to pass parameters to a model without explicitly allowing them.
+
+- To resolve this: Permit the parameters explicitly in our controller. For example `params.require(:blog_post).permit(:title, :body)`. Here, `:blog_post` is the `key` and `:title` and `:body` are the attributes which are permitted to do the action. 
