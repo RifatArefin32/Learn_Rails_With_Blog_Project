@@ -58,6 +58,9 @@ The routers will be written at `config/routers.rb` file
 
 ## Create A New Controller
 ```bash
+rails generate controller JobPosts
+```
+```bash
 rails generate controller BlogPosts index --skip-routes # without creating routes
 ```
 - Create `app/controllers/blog_posts_controller.rb` controller

@@ -1,0 +1,13 @@
+<h1>Job id: <%= @job_post.id %></h1>
+
+<div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+    <div>
+        <h4> Job Title: <%= @job_post.title %> </h4> 
+        <h4> Company: <%= @job_post.organization %> </h4> 
+        <h4> Job Status: <%= @job_post.status %> </h4>
+        <h4> Salary: <%= @job_post.salary %> </h4> 
+        <h4> Working Days: <%= @job_post.work_days %> </h4> 
+        
+        <h4><%= link_to "All Jobs", job_posts_path %></h4>
+    </div>
+</div>

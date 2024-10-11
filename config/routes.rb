@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   get "/blog_posts/:id/edit", to: "blog_posts#edit", as: :edit_blog_post
   post "/blog_posts", to: "blog_posts#create"
 
+  # Routers for CRUDs on Job Posts
+  resources :job_posts
+
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check

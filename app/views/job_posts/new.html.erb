@@ -1,0 +1,50 @@
+<h1>Create a Job Post</h1>
+
+<%= form_with model:@job_post do |f| %>
+    <div>
+        <% if f.object.errors.any? %>
+            <div>
+                <% f.object.errors.full_messages.each do |message| %>
+                    <div> <%= message %> </div>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+    
+    <%# Job title %>
+    <div style="margin: 10px;">
+        <%= f.label :title, "Job Title: " %>
+        <%= f.text_field :title %>
+    </div>
+
+    <%# Organization %>
+    <div style="margin: 10px;">
+        <%= f.label :organization, "Company: " %>
+        <%= f.text_field :organization %>
+    </div>
+    
+    <%# Job Status %>
+    <div style="margin: 10px;">
+        <%= f.label :status, "Job Status: " %>
+        <%= f.select :status, options_for_select([
+                ['On-Site', 'onsite'], ['Remote', 'remote'], ['Hybrid', 'hybrid']
+            ]), prompt: 'Select Job Status' %>
+    </div>
+
+    <%# Salary %>
+    <div style="margin: 10px;">
+        <%= f.label :salary, "Salary per month (BDT): " %>
+        <%= f.text_field :salary %>
+    </div>
+
+    <%# Working days %>
+    <div style="margin: 10px;">
+        <%= f.label :work_days, "Working Days: " %>
+        <%= f.text_field :work_days %>
+    </div>
+
+    <%# Submit button %>
+    <div>
+        <%= f.submit "Create your job", disable_with: 'Submiting...' %>
+    </div>
+<% end %>

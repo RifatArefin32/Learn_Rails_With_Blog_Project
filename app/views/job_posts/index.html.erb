@@ -1,0 +1,15 @@
+<h1>All Jobs</h1>
+
+<% @job_posts.each do |job| %>
+    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+        <div>
+            <strong> <%= job.title %> </strong> | 
+            <strong> <%= job.organization %> </strong> |
+            <strong><%= link_to "See Details", job_post_path(job.id) %></strong>
+        </div>
+    </div>
+<% end %>
+
+<div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
+    <strong><%= link_to "Create a job", new_job_post_path %></strong>
+</div>
