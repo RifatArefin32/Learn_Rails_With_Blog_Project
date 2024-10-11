@@ -1,5 +1,4 @@
 class JobPostsController < ApplicationController
-  
   def index
     @job_posts = JobPost.all 
   end
@@ -32,6 +31,12 @@ class JobPostsController < ApplicationController
     else
       render :edit, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @job_post = JobPost.find(params[:id])
+    @job_post.destroy
+    redirect_to job_posts_path
   end
 
 

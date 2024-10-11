@@ -1,5 +1,11 @@
 <h1>Create a Job Post</h1>
 
 <div>
-    <%= render partial: "form", locals: {job_post: @job_post} %>
+    <%= render partial: "form", locals: {job_post: @job_post} %>  
 </div>
+
+<div>
+   <%= button_to "Delete", @job_post, method: :delete, data: {turbo_confirm: 'Are you sure?' } %>
+</div>
+
+<div> <%= link_to "All", job_post_path%> </div>
