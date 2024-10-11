@@ -14,7 +14,7 @@
 ## Create a new project  
 
 ```bash
-rails new blog`
+rails new blog
 ```
 
 ## Create a Model

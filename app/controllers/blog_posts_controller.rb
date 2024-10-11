@@ -23,7 +23,7 @@ class BlogPostsController < ApplicationController
       # redirect_to @blog_post
       redirect_to blog_post_path(@blog_post.id)
     else
-      render :new # if saving fails `new` template will be rendered
+      render :new, status: :unprocessable_entity
     end
   end
 
