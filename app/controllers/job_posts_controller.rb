@@ -17,7 +17,20 @@ class JobPostsController < ApplicationController
     if @job_post.save
       redirect_to job_posts_path
     else
-      render :new, status: :unprocessable_entity 
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def edit
+    @job_post = JobPost.find(params[:id])
+  end
+
+  def update
+    @job_post = JobPost.find(params[:id])
+    if @job_post.update(job_post_params)
+      redirect_to job_post_path(@job_post.id)
+    else
+      render :edit, status: :unprocessable_entity
     end
   end
 

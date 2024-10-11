@@ -8,6 +8,6 @@
         <h4> Salary: <%= @job_post.salary %> </h4> 
         <h4> Working Days: <%= @job_post.work_days %> </h4> 
         
-        <h4><%= link_to "All Jobs", job_posts_path %></h4>
+        <h4><%= link_to "Edit", edit_job_post_path(@job_post.id) %> | <%= link_to "All Jobs", job_posts_path %> </h4>
     </div>
 </div>
