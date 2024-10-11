@@ -1,13 +1,14 @@
-<h1>Show Page</h1>
+<h1>Blog id: <%= @blog_post.id %></h1>
 
-<div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
-    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
-        <h2> <%= @blog_post.title %> </h2>
+<div style="border: 1px solid black; padding: 5px; margin: 10px; border-radius: 10px">
+    <div style="border: 1px solid black; padding: 5px; margin: 10px; border-radius: 10px">
+        <h4> <%= @blog_post.title %> </h4>
+    </div>
+    <div style="border: 1px solid black; padding: 5px; margin: 10px; border-radius: 10px">
+        <p> <%= @blog_post.body %> </p>
     </div>
     <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
-        <h2> <%= @blog_post.body %> </h2>
-    </div>
-    <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
-        <h2> <%= link_to "Home Page", root_path %> </h2>
+        <strong> <%= link_to "Edit Post", edit_blog_post_path(@blog_post.id) %> </strong> | 
+        <strong> <%= link_to "Go Home", root_path %> </strong>
     </div>
 </div>    

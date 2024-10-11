@@ -1,0 +1,9 @@
+<h1>Edit Blog</h1>
+
+<div>
+    <%= render partial: "form", locals: {blog_post: @blog_post} %>
+</div>
+<div>
+    <%= button_to "Delete Post", @blog_post, method: :delete %>
+</div>
+

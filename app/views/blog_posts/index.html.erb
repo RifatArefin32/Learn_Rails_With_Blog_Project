@@ -1,4 +1,4 @@
-<h1>Index Page</h1>
+<h1>All Blogs</h1>
 
 <% @blog_posts.each do |blog_post| %>
     <div style="border: 1px solid black; padding: 10px; margin: 10px; border-radius: 10px">
@@ -9,9 +9,9 @@
             <h3> <%= blog_post.body %> </h3>
         </div>
         <div>
-            <strong> <%= link_to "Go Details", "/blog_posts/#{blog_post.id}" %> </strong>
-            <strong> <%= link_to "Go Details", blog_post_path(blog_post.id) %> </strong>
-            <strong> <%= link_to "Go Details", blog_post %> </strong>
+            <strong> <%= link_to "See Details", "/blog_posts/#{blog_post.id}" %> </strong> | 
+            <strong> <%= link_to "Edit", edit_blog_post_path(blog_post.id) %> </strong> |
+            <strong> <%= button_to "Delete", blog_post, method: :delete %> </strong>
         </div>
     </div>
 <% end %>
